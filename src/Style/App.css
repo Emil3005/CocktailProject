@@ -2,8 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 20vmin;
+.mainContent{
+  margin-top: 13%;
+  text-align: center;
+  font-size: 14;
+  color: #000000;
 }
 
 .App-header {

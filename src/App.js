@@ -1,4 +1,4 @@
-import logo from './Assets/CocktailCloudTransparent.png'
+
 import Header from './Components/Header/Header.js'
 import './Style/App.css'
 
@@ -8,8 +8,14 @@ function App() {
     <div className="CocktailCloud">
       <div>
         <Header />
-      </div>
-        <img src={logo} className="App-logo" alt="logo" />
+      </div> 
+          <div className ="mainContent">
+            <ul>
+            A Random Cocktail: <br></br>
+            Sex on the Beach
+            </ul>
+          </div>
+        
     </div>
   );
 }
