@@ -1,0 +1,34 @@
+nav{
+    height : 80px;
+    border: 2px solid #a1a0a0;
+    background-color: #ffffff;
+
+}
+
+.Header-logo{
+    height: 70px;
+    width: 120px;
+    padding: 0 20px;
+}
+.Header-icon{
+    height: 40px;
+    width: 45px;
+    padding: 0 20px;
+}
+.Header-header{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-button{
+
+}
+.Header-rightIcons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
