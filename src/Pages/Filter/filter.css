@@ -1,0 +1,13 @@
+.IngredientsTitle{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.FilterFunctions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5%;
+    /*background-color: grey;*/
+}
