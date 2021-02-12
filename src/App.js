@@ -1,6 +1,7 @@
 
 import Header from './Components/Header/Header.js'
 import './Style/App.css'
+import Filter from './Pages/filter'
 
 
 function App() {
@@ -10,10 +11,7 @@ function App() {
         <Header />
       </div> 
           <div className ="mainContent">
-            <ul>
-            A Random Cocktail: <br></br>
-            Sex on the Beach
-            </ul>
+            <Filter />
           </div>
         
     </div>

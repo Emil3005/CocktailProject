@@ -4,7 +4,8 @@
 
 .mainContent{
   margin-top: 13%;
-  text-align: center;
+  text-align: left;
+  margin-left: 5%;
   font-size: 14;
   color: #000000;
 }
