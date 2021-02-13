@@ -1,78 +1,78 @@
 import React from 'react';
 import './filter.css';
 import Dropdown from './Dropdown.js'
+import Dropdown2 from './Dropdown2.js'
 
 const Alkohol= [
     {
-        id: 1,
-        value :'Gin',
+        value: 1,
+        label :'Gin',
     },
     {
-        id:2,
-        value:'Vodka',
+        value:2,
+        label:'Vodka',
     },
     {
-        id:3,
-        value: 'Whiskey',
+        value:3,
+        label: 'Whiskey',
     },
 ];
 const Zutaten= [
     {
-        id: 1,
-        value :'Zitrone',
+        value: 1,
+        label :'Zitrone',
     },
     {
-        id:2,
-        value:'Orange',
+        value:2,
+        label:'Orange',
     },
     {
-        id:3,
-        value: 'Basilikumblätter',
+        value:3,
+        label: 'Basilikumblätter',
     },
 ];
-const SoftDrink= [
+const Softdrinks= [
     {
-        id: 1,
-        value :'Tonic Water',
+        value: 1,
+        label :'Tonic Water',
     },
     {
-        id:2,
-        value:'Orangensaft',
+        value:2,
+        label:'Orangensaft',
     },
     {
-        id:3,
-        value: 'Ananassaft',
+        value:3,
+        label: 'Ananassaft',
     },
     {
-        id:4,
-        value: 'Bananensaft',
+        value:4,
+        label: 'Bananensaft',
     },
     {
-        id:5,
-        value: 'Multivitaminsaft',
+        value:5,
+        label: 'Multivitaminsaft',
     },
     {
-        id:6,
-        value: 'Apfelsaft',
+        value:6,
+        label: 'Apfelsaft',
     },
     {
-        id:7,
-        value: 'Grenadinensirup',
+        value:7,
+        label: 'Grenadinensirup',
     },
     {
-        id:8,
-        value: 'Maracujasirup',
+        value:8,
+        label: 'Maracujasirup',
     },
 ];
 
 const Filter = () =>{
     return(
         <div className= "FilterFunctions">
-            <Dropdown title="Select Alkohol" items={Alkohol} multiSelect/>
-            <Dropdown title="Select SoftDrinks" items={SoftDrink} multiSelect/>
-            <Dropdown title="Select Zutaten" items={Zutaten} multiSelect/>
-            <Dropdown title="Select Zutaten" items={Zutaten} multiSelect/>
             
+            <Dropdown2 title="Select Zutaten" items={Zutaten}/>
+            <Dropdown2 title="Select Alkohol" items={Alkohol}/>
+            <Dropdown2 title="Select Softdrinks" items={Softdrinks}/>
         </div>
     );
 }
