@@ -66,14 +66,18 @@ const Softdrinks= [
     },
 ];
 
+  var chosenAlcohol= [];
+  var chosenNonAlcohol= [];
+  var chosenIngredients= [];
+  
 const Filter = () =>{
     return(
         <div className= "FilterFunctions">
-            
-            <Dropdown2 title="Select Zutaten" items={Zutaten}/>
-            <Dropdown2 title="Select Alkohol" items={Alkohol}/>
-            <Dropdown2 title="Select Softdrinks" items={Softdrinks}/>
+            <Dropdown2 title="Wähle Zutaten aus" items={Zutaten}/>
+            <Dropdown2 title="Wähle Alkohol aus" items={Alkohol}/>
+            <Dropdown2 title="Wähle Softdrinks aus" items={Softdrinks}/>
         </div>
     );
 }
+
 export default Filter;
