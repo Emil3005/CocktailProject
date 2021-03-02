@@ -1,6 +1,5 @@
 import React from 'react';
-import './filter.css';
-import Dropdown from './Dropdown.js'
+import './Filter.css';
 import Dropdown2 from './Dropdown2.js'
 
 const Alkohol= [

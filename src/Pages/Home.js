@@ -1,13 +1,13 @@
 
 
-function Rating() {
+function Home() {
     return (
       <div className="CocktailCloud">
         <div>
-            <h1>Rating</h1>
+            <h1>Home</h1>
         </div>    
       </div>
     );
   }
 
-  export default Rating
+  export default Home
