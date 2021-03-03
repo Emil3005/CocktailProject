@@ -3,16 +3,17 @@ import Select from 'react-select';
 import './Dropdown2.css'
 
 
-function Dropdown2({title, items})
+function Dropdown2({title, items,onItemsChanged})
 {
     
     var[chosenItems,getvalue]=useState();
     var Ddlhandle = (e) =>
     {
         getvalue(Array.isArray(e)?e.map(x=>x.label):[]);
+        onItemsChanged(chosenItems);
     }  
     return(
-        chosenItems,
+        
         <div className="Auswahl">
             {title}<Select isMulti options ={items} onChange={Ddlhandle}></Select>
             {chosenItems}
@@ -20,5 +21,6 @@ function Dropdown2({title, items})
         
     );
 }
+
 
 export default Dropdown2;

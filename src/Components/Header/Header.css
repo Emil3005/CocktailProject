@@ -24,11 +24,4 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.Header-button{
 
-}
-.Header-rightIcons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}

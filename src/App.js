@@ -5,6 +5,7 @@ import Filter from './Pages/Filter/Filter'
 import Home from "./Pages/Home";
 import Rating from "./Pages/Rating";
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
+import DrinksDetail from './Pages/DrinksDetail';
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
       </div> 
       <div className ="mainContent">
         <Switch>
-          <Route path="/Rating" component={Rating}/>
+          <Route path="/Rating" exact component={Rating}/>
           <Route path="/Filter" component={Filter}/>
           <Route path="/" exact component={Home}/>
+          <Route path ="/Rating/:id" component={DrinksDetail} />
         </Switch>
       </div>
     </div>

@@ -1,0 +1,22 @@
+
+.list{
+    list-style: none;
+    text-align: left;
+    font-size: 1.6rem;
+    margin-top: -10%;
+   
+}
+.CocktailPicture{
+    height: 300px;
+    width: 300px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.Instruction{
+    font-size: 1.4rem;
+    padding-right: 50%;
+}
+.Title{
+    font-size: 2.5rem;
+    text-align: left;
+}

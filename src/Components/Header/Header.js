@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import Home from '../../Assets/Home.png'
+import Stars from '../../Assets/5Stars.png'
 import Trichter from '../../Assets/Trichter.png'
 import logo from '../../Assets/LogoIcon.png'
 import "./Header.css"
@@ -20,7 +21,10 @@ const Header = () =>{
                             <img src={Home} className="Header-icon" alt="Home" />
                         </Link>
                         <Link to ="/Filter">
-                            <img src={Trichter} className="Header-icon" alt="Trichter" />
+                            <img src={Trichter} className="Header-icon" alt="Filter" />
+                        </Link>
+                        <Link to ="/Rating">
+                            <img src={Stars} className="Header-icon" alt= "Rating" />
                         </Link>
                 </div>
             </div>

@@ -1,0 +1,25 @@
+.Title{
+    text-decoration: solid;
+    font-size: 5rem;
+    margin-top: -10%;
+    padding-top: 0%;
+    text-align: center;
+    
+}
+.Pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    margin-left: 2%;
+    
+    
+    
+}
+.Picture{
+    
+    height: 200px;
+    width: 200px;
+}

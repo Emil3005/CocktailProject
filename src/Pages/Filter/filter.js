@@ -64,7 +64,6 @@ const Softdrinks= [
         label: 'Maracujasirup',
     },
 ];
-
   var chosenAlcohol= [];
   var chosenNonAlcohol= [];
   var chosenIngredients= [];
@@ -72,9 +71,9 @@ const Softdrinks= [
 const Filter = () =>{
     return(
         <div className= "FilterFunctions">
-            <Dropdown2 title="Wähle Zutaten aus" items={Zutaten}/>
-            <Dropdown2 title="Wähle Alkohol aus" items={Alkohol}/>
-            <Dropdown2 title="Wähle Softdrinks aus" items={Softdrinks}/>
+            <Dropdown2 title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => chosenIngredients = items}/>
+            <Dropdown2 title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => chosenAlcohol = items}/>
+            <Dropdown2 title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => chosenNonAlcohol = items}/>
         </div>
     );
 }

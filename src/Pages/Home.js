@@ -1,12 +1,17 @@
-
+import React from 'react';
+import "./Home.css";
+import {Link} from 'react-router-dom';
+import ArrayPictures from './ArrayPictures';
 
 function Home() {
     return (
-      <div className="CocktailCloud">
-        <div>
-            <h1>Home</h1>
-        </div>    
-      </div>
+      <div className="HomeContent">
+        <div className ="Title">
+            Home
+            <ArrayPictures />
+        </div>
+      </div>    
+      
     );
   }
 
