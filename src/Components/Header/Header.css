@@ -24,4 +24,10 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+.Bottle_Icon{
+    height: 40px;
+    width: 35px;
+    padding: 0 20px;
+    
+}
 

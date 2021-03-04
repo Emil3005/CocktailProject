@@ -1,11 +1,10 @@
 import React ,{useState} from 'react';
 import Select from 'react-select';
-import './Dropdown2.css'
+import './DropdownBrands.css'
 
 
-function Dropdown2({title, items,onItemsChanged})
+function DropdownBrands({title, items,onItemsChanged})
 {
-    
     var[chosenItems,getvalue]=useState();
     var Ddlhandle = (e) =>
     {
@@ -13,14 +12,10 @@ function Dropdown2({title, items,onItemsChanged})
         onItemsChanged(chosenItems);
     }  
     return(
-        
         <div className="Auswahl">
-            {title}<Select isMulti options ={items} onChange={Ddlhandle}></Select>
+            {title}<Select options ={items} onChange={Ddlhandle}></Select>
             {chosenItems}
         </div>
-        
     );
 }
-
-
-export default Dropdown2;
+export default DropdownBrands;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Filter.css';
-import Dropdown2 from './Dropdown2.js'
+import Dropdown from './Dropdown.js'
 
 const Alkohol= [
     {
@@ -71,9 +71,9 @@ const Softdrinks= [
 const Filter = () =>{
     return(
         <div className= "FilterFunctions">
-            <Dropdown2 title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => chosenIngredients = items}/>
-            <Dropdown2 title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => chosenAlcohol = items}/>
-            <Dropdown2 title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => chosenNonAlcohol = items}/>
+            <Dropdown title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => chosenIngredients = items}/>
+            <Dropdown title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => chosenAlcohol = items}/>
+            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => chosenNonAlcohol = items}/>
         </div>
     );
 }

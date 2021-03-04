@@ -7,7 +7,7 @@ function Home() {
     return (
       <div className="HomeContent">
         <div className ="Title">
-            Home
+           
             <ArrayPictures />
         </div>
       </div>    

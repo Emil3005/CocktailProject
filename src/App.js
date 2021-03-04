@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Rating from "./Pages/Rating";
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
 import DrinksDetail from './Pages/DrinksDetail';
+import Brands from './Pages/Brands/Brands.js';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Filter" component={Filter}/>
           <Route path="/" exact component={Home}/>
           <Route path ="/Rating/:id" component={DrinksDetail} />
+          <Route path ="/Brands" component={Brands} />
         </Switch>
       </div>
     </div>

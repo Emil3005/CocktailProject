@@ -4,6 +4,7 @@ import Home from '../../Assets/Home.png'
 import Stars from '../../Assets/5Stars.png'
 import Trichter from '../../Assets/Trichter.png'
 import logo from '../../Assets/LogoIcon.png'
+import Bottle from '../../Assets/BottleIcon.png'
 import "./Header.css"
 const Header = () =>{
     
@@ -17,6 +18,9 @@ const Header = () =>{
                     </Link>
                 </div>
                     <div className="Header-rightIcons">
+                        <Link to ="/Brands">
+                            <img src={Bottle} className="Bottle_Icon" alt= "Brands" />
+                        </Link>
                         <Link to ="/">
                             <img src={Home} className="Header-icon" alt="Home" />
                         </Link>
@@ -26,6 +30,7 @@ const Header = () =>{
                         <Link to ="/Rating">
                             <img src={Stars} className="Header-icon" alt= "Rating" />
                         </Link>
+                        
                 </div>
             </div>
 
