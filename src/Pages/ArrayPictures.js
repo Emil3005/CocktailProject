@@ -12,7 +12,7 @@ function ArrayPictures() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=b'
+        const data = await fetch('https://www.thecocktaildb.com/api/json/v2/9973533/popular.php'
         );
         const items = await data.json();
         console.log(items.drinks);

@@ -7,6 +7,8 @@ import Rating from "./Pages/Rating";
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
 import DrinksDetail from './Pages/DrinksDetail';
 import Brands from './Pages/Brands/Brands.js';
+import AllDrinksList from './Pages/AllDrinks/AllDrinksList';
+import GetIngredients from './Pages/Filter/GetIngredients';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path ="/Rating/:id" component={DrinksDetail} />
           <Route path ="/Brands" component={Brands} />
+          <Route path ="/AllDrinks" component={AllDrinksList} />
+          <Route path ="/Ingredients" component={GetIngredients}/>
         </Switch>
       </div>
     </div>

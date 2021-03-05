@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Filter.css';
 import Dropdown from './Dropdown.js'
 
@@ -64,16 +64,38 @@ const Softdrinks= [
         label: 'Maracujasirup',
     },
 ];
-  var chosenAlcohol= [];
-  var chosenNonAlcohol= [];
-  var chosenIngredients= [];
+
+    
+ 
   
 const Filter = () =>{
+
+    useEffect(() => {
+        fetchItems();
+    },[]);
+    
+    const [items, setItems] = useState([]);
+    
+    
+    const fetchItems = async () => {
+        const data = await fetch('https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list'
+        );
+        const items = await data.json();
+        console.log(items.drinks);
+        setItems(items.drinks)
+    }
+    const [chosenIngredients, setChosenIngredients] = useState([]);
+    const [chosenAlcohol, setChosenAlcohol] = useState([]);
+    const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
     return(
         <div className= "FilterFunctions">
-            <Dropdown title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => chosenIngredients = items}/>
-            <Dropdown title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => chosenAlcohol = items}/>
-            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => chosenNonAlcohol = items}/>
+            <Dropdown title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => setChosenIngredients(items)}/>
+            gewählte Zutaten: {chosenIngredients}
+            <Dropdown title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => setChosenAlcohol(items) }/>
+            gewählter Alkohol: {chosenAlcohol}
+            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/>
+            gewählte Softrinks: {chosenNonAlcohol}
+            
         </div>
     );
 }

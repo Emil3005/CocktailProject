@@ -5,20 +5,17 @@ import './Dropdown.css'
 
 function Dropdown({title, items,onItemsChanged})
 {
-    
-    var[chosenItems,getvalue]=useState();
+    var[chosenItems,setvalue]=useState();
     var Ddlhandle = (e) =>
     {
-        getvalue(Array.isArray(e)?e.map(x=>x.label):[]);
-        onItemsChanged(chosenItems);
+        const value = Array.isArray(e)?e.map(x=>x.label):[];
+        setvalue(value);
+        onItemsChanged(value);
     }  
     return(
-        
         <div className="Auswahl">
-            {title}<Select isMulti options ={items} onChange={Ddlhandle}></Select>
-            {chosenItems}
+            {title}<Select isMulti options ={items} onChange = {(e)=> Ddlhandle(e)} ></Select>
         </div>
-        
     );
 }
 

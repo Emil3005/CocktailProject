@@ -1,6 +1,5 @@
 
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
 
 function GetBrands() {
   useEffect(() => {
@@ -8,7 +7,7 @@ function GetBrands() {
 },[]);
 
 const [items, setItems] = useState([]);
-images :{};
+
 
 
 const fetchItems = async () => {
