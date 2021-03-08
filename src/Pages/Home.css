@@ -1,9 +1,9 @@
 .Title{
     text-decoration: solid;
     font-size: 5rem;
-    margin-top: -10%;
     padding-top: 0%;
     text-align: center;
+    padding-top: 1%;
     
 }
 .Pictures{
@@ -18,8 +18,21 @@
     
     
 }
+.btn{
+    width: 400;
+    color: black;
+    background-color: grey;
+    scale: 130%;
+    padding: 0.1%;
+    
+}
 .Picture{
     
     height: 200px;
     width: 200px;
+}
+.HomeContent{
+    margin-top: -10%;
+    font-size: 1.3rem;
+    text-align: center;
 }

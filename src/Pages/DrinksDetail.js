@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
 import "./Rating.css"
 import "./DrinksDetails.css"
 import "./Home.css"

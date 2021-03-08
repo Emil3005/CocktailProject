@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Filter.css';
+import {Link} from 'react-router-dom'
 import Dropdown from './Dropdown.js'
 
 const Alkohol= [
@@ -14,6 +15,14 @@ const Alkohol= [
     {
         value:3,
         label: 'Whiskey',
+    },
+    {
+        value:4,
+        label: 'Whisky',
+    },
+    {
+        value:5,
+        label: 'Tequila',
     },
 ];
 const Zutaten= [
@@ -87,6 +96,7 @@ const Filter = () =>{
     const [chosenIngredients, setChosenIngredients] = useState([]);
     const [chosenAlcohol, setChosenAlcohol] = useState([]);
     const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
+    const [allIngredients, setAllIngredients] = useState([]);
     return(
         <div className= "FilterFunctions">
             <Dropdown title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => setChosenIngredients(items)}/>
@@ -95,6 +105,14 @@ const Filter = () =>{
             gewählter Alkohol: {chosenAlcohol}
             <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/>
             gewählte Softrinks: {chosenNonAlcohol}
+            
+            <div>
+                <br></br>
+                
+                <Link to = {`/Filter/${chosenAlcohol},${chosenNonAlcohol}`} >
+                    <button>Suchen</button>
+                </Link>
+            </div>
             
         </div>
     );

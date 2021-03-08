@@ -9,6 +9,8 @@ import DrinksDetail from './Pages/DrinksDetail';
 import Brands from './Pages/Brands/Brands.js';
 import AllDrinksList from './Pages/AllDrinks/AllDrinksList';
 import GetIngredients from './Pages/Filter/GetIngredients';
+import ChosenIngredients from './Pages/Filter/ChosenIngredients';
+import ShowCocktails from './Pages/Filter/ShowCocktails';
 
 
 function App() {
@@ -21,12 +23,14 @@ function App() {
       <div className ="mainContent">
         <Switch>
           <Route path="/Rating" exact component={Rating}/>
-          <Route path="/Filter" component={Filter}/>
+          <Route path="/Filter" exact component={Filter}/>
           <Route path="/" exact component={Home}/>
           <Route path ="/Rating/:id" component={DrinksDetail} />
           <Route path ="/Brands" component={Brands} />
           <Route path ="/AllDrinks" component={AllDrinksList} />
           <Route path ="/Ingredients" component={GetIngredients}/>
+          <Route path ="/Filter/:chosenAlcohol" component={ShowCocktails} />
+      
         </Switch>
       </div>
     </div>
