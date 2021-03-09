@@ -30,6 +30,7 @@ function App() {
           <Route path ="/AllDrinks" component={AllDrinksList} />
           <Route path ="/Ingredients" component={GetIngredients}/>
           <Route path ="/Filter/:chosenAlcohol" component={ShowCocktails} />
+          <Route path ="/Filter/,:chosenAlcohol" component={ShowCocktails} />
       
         </Switch>
       </div>
