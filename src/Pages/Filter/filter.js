@@ -3,7 +3,7 @@ import './Filter.css';
 import {Link} from 'react-router-dom'
 import Dropdown from './Dropdown.js'
 
-const Alkohol= [
+const Alcohol= [
     {
         value: 1,
         label :'Gin',
@@ -14,29 +14,27 @@ const Alkohol= [
     },
     {
         value:3,
-        label: 'Whiskey',
+        label: 'Absolut Vodka',
     },
     {
         value:4,
-        label: 'Whisky',
+        label: 'Dark Rum',
     },
     {
         value:5,
+        label: 'Light Rum',
+    },
+    {
+        value:6,
         label: 'Tequila',
     },
-];
-const Zutaten= [
     {
-        value: 1,
-        label :'Zitrone',
+        value:7,
+        label: 'Rum',
     },
     {
-        value:2,
-        label:'Orange',
-    },
-    {
-        value:3,
-        label: 'Basilikumblätter',
+        value:8,
+        label: 'Whiskey',
     },
 ];
 const Softdrinks= [
@@ -46,31 +44,31 @@ const Softdrinks= [
     },
     {
         value:2,
-        label:'Orangensaft',
+        label:'Orange juice',
     },
     {
         value:3,
-        label: 'Ananassaft',
+        label: 'Pineapple juice',
     },
     {
         value:4,
-        label: 'Bananensaft',
+        label: 'Banana juice',
     },
     {
         value:5,
-        label: 'Multivitaminsaft',
+        label: 'Multivitamin juice',
     },
     {
         value:6,
-        label: 'Apfelsaft',
+        label: 'Apple juice',
     },
     {
         value:7,
-        label: 'Grenadinensirup',
+        label: 'Grenadine syrup',
     },
     {
         value:8,
-        label: 'Maracujasirup',
+        label: 'Passion fruit syrup',
     },
 ];
 
@@ -93,24 +91,21 @@ const Filter = () =>{
         console.log(items.drinks);
         setItems(items.drinks)
     }
-    const [chosenIngredients, setChosenIngredients] = useState([]);
+
     const [chosenAlcohol, setChosenAlcohol] = useState([]);
     const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
-    const [allIngredients, setAllIngredients] = useState([]);
     return(
         <div className= "FilterFunctions">
-            <Dropdown title="Wähle Zutaten aus"    items={Zutaten}    onItemsChanged={(items) => setChosenIngredients(items)}/>
-            gewählte Zutaten: {chosenIngredients}
-            <Dropdown title="Wähle Alkohol aus"    items={Alkohol}    onItemsChanged={(items) => setChosenAlcohol(items) }/>
-            gewählter Alkohol: {chosenAlcohol}
-            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/>
-            gewählte Softrinks: {chosenNonAlcohol}
             
-            <div>
+            <Dropdown title="Wähle Alkohol aus"    items={Alcohol}    onItemsChanged={(items) => setChosenAlcohol(items) }/>
+            chosenAlcohol: {chosenAlcohol}
+            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/>
+            chosenNonAlcohol: {chosenNonAlcohol}    
+        <div>
                 <br></br>
                 
-                <Link to = {`/Filter/${chosenAlcohol},${chosenNonAlcohol}`} >
-                    <button>Suchen</button>
+                <Link to = {`/Filter/${chosenAlcohol},${chosenNonAlcohol}`}>
+                    <button>Search</button>
                 </Link>
             </div>
             

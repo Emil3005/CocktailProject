@@ -1,9 +1,9 @@
 import React ,{useState} from 'react';
 import Select from 'react-select';
-import './DropdownBrands.css'
+import './DropdownSingle.css'
 
 
-function DropdownBrands({title, items,onItemsChanged})
+function DropdownSingle({title, items,onItemsChanged})
 {
     var[chosenItems,getvalue]=useState();
     var Ddlhandle = (e) =>
@@ -18,4 +18,4 @@ function DropdownBrands({title, items,onItemsChanged})
         </div>
     );
 }
-export default DropdownBrands;
+export default DropdownSingle;

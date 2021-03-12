@@ -10,7 +10,7 @@
 }
 .vertical{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     list-style: none;   
 
@@ -21,7 +21,7 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    background-color: lightgrey;
+    
 }
 .Ingredients{
     list-style: none;
@@ -32,4 +32,5 @@
 }
 .Title{
     font-size: 1.4rem;
+    margin-left: 3%;
 }

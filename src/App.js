@@ -9,8 +9,8 @@ import DrinksDetail from './Pages/DrinksDetail';
 import Brands from './Pages/Brands/Brands.js';
 import AllDrinksList from './Pages/AllDrinks/AllDrinksList';
 import GetIngredients from './Pages/Filter/GetIngredients';
-import ChosenIngredients from './Pages/Filter/ChosenIngredients';
 import ShowCocktails from './Pages/Filter/ShowCocktails';
+import Game from './Pages/Games/Game';
 
 
 function App() {
@@ -31,6 +31,8 @@ function App() {
           <Route path ="/Ingredients" component={GetIngredients}/>
           <Route path ="/Filter/:chosenAlcohol" component={ShowCocktails} />
           <Route path ="/Filter/,:chosenAlcohol" component={ShowCocktails} />
+          <Route path ="/Filter/:chosenAlcohol," component={ShowCocktails} />
+          <Route path ="/Game" component={Game} />
       
         </Switch>
       </div>

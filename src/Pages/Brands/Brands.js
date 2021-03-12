@@ -1,6 +1,6 @@
 import React from 'react';
 import './Brands.css';
-import DropdownBrands from './DropdownBrands';
+import DropdownSingle from './DropdownSingle';
 import GetBrands from './GetBrands.js';
 
 const Alkohol= [
@@ -39,11 +39,9 @@ const Alkohol= [
 const Brands = () =>{
     return(
         <div className= "BrandFilter">
-            <DropdownBrands title="Wähle Alkohol aus" items={Alkohol} onItemsChanged={(items) => chosenAlkohol = items}/>
+            <DropdownSingle title="Chose your Alcohol" items={Alkohol} onItemsChanged={(items) => chosenAlkohol = items}/>
             <GetBrands />
         </div>
-        
-        
     );
 }
 

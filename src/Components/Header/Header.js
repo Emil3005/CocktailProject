@@ -18,7 +18,7 @@ const Header = () =>{
                     </Link>
                 </div>
                     <div className="Header-rightIcons">
-                        <Link to ="/Brands">
+                        <Link to ="/Game">
                             <img src={Bottle} className="Bottle_Icon" alt= "Brands" />
                         </Link>
                         <Link to ="/">

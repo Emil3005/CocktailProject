@@ -1,0 +1,21 @@
+.content{
+    margin-top: -10%;
+}
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+
+}
+.element{
+    padding: 1%;
+}
+.button{
+    margin-top: 30%;
+    padding: 1%;
+    margin-left: 15%;
+}
+.title{
+    text-align: center;
+}

@@ -30,15 +30,15 @@ function DrinksDetail({match}) {
           {items.map(item => (
                 <h2 key={item.idDrink}>
                     <ul className = "list">
-                        <li className ="Title"> Name = {item.strDrink} </li>
+                        <li className ="Title"> name = {item.strDrink} </li>
                         <li> <img src={item.strDrinkThumb} alt="" className="CocktailPicture"/>  </li>
-                        <li> Ingredient1  = {item.strIngredient1}</li>
-                        <li> Ingredient2  = {item.strIngredient2}</li>
-                        <li> Ingredient3  = {item.strIngredient3}</li>
-                        <li> Ingredient4  = {item.strIngredient4}</li>
-                        <li> Ingredient5  = {item.strIngredient5}</li>
-                        <li> Ingredient6  = {item.strIngredient6}</li>
-                        <li className ="Instruction"> Zubereitung = {item.strInstructionsDE}</li>
+                        <li> ingredient1  = {item.strIngredient1}</li>
+                        <li> ingredient2  = {item.strIngredient2}</li>
+                        <li> ingredient3  = {item.strIngredient3}</li>
+                        <li> ingredient4  = {item.strIngredient4}</li>
+                        <li> ingredient5  = {item.strIngredient5}</li>
+                        <li> ingredient6  = {item.strIngredient6}</li>
+                        <li className ="Instruction"> instruction = {item.strInstructions}</li>
                    </ul>
                    
                    
