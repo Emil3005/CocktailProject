@@ -39,6 +39,7 @@ function ShowCocktails({match}){
                 console.log(data.drinks);
             }
             else{
+                
                 return(
                     <div>
                         no results for your chosen ingredients.

@@ -32,7 +32,7 @@ class Home extends Component {
               You want to play some Games while drinking Cocktails or just in general. Press the Games button, to see what we can offer.
               <br></br>
               <Link to ="/Game">
-                  <button className="btn">Gesellschaftsspiele</button>
+                  <button className="btn">Game</button>
                   </Link>
             </div>
             <div>

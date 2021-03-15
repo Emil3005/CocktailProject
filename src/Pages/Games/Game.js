@@ -96,7 +96,7 @@ function Game () {
             <li className='element'><DropdownSingle title="Chose the genre you want to play"  items={genres} onItemsChanged={(items) => setGenre(items)}/></li>
             <li> <button className='button'>Show Games</button></li>
             </ul>
-            {genre}{amount}
+            
         </div>
     )
 

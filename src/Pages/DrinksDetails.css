@@ -16,7 +16,11 @@
     font-size: 1.4rem;
     padding-right: 50%;
 }
-.Title{
-    font-size: 2.5rem;
-    text-align: left;
+
+.CocktailPicture2{
+    height: 400px;
+    width: 400px;
+}
+.name{
+    font-size: 2.3rem;
 }
