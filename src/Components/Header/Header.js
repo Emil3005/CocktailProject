@@ -6,10 +6,12 @@ import Trichter from '../../Assets/Trichter.png'
 import logo from '../../Assets/LogoIcon.png'
 import Bottle from '../../Assets/BottleIcon.png'
 import "./Header.css"
+
 const Header = () =>{
     
    
     return(
+        
         <nav>
             <div className = "Header-header">
                 <div>

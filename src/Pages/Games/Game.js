@@ -138,7 +138,8 @@ function Game () {
         
     ];
      const [amount, setAmount] = useState([]);
-     const [genre, setGenre] = useState({});
+     
+     const [genre, setGenre] = useState([]);
 
      
 

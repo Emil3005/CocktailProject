@@ -12,6 +12,8 @@ function ShowCocktails({match}){
         text = `${match.params.chosenAlcohol}`;
 
         new_array = text.split(',');
+        
+        console.log("hallo");
         console.log(new_array);
         console.log(text.endsWith(','));
         if(text.endsWith(',')){
@@ -21,10 +23,12 @@ function ShowCocktails({match}){
         if(text.startsWith(",")){
             text = text.slice(1);
             console.log(text)
+
         }
         fetchItems(text);
         setItems([]);
         new_array.forEach(filter=>fetchItems(filter))
+
     },[]);
     
     const fetchItems =  (filter) =>  {
