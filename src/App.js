@@ -11,6 +11,7 @@ import AllDrinksList from './Pages/AllDrinks/AllDrinksList';
 import GetIngredients from './Pages/Filter/GetIngredients';
 import ShowCocktails from './Pages/Filter/ShowCocktails';
 import Game from './Pages/Games/Game';
+import ShowGames from './Pages/Games/ShowGames';
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
           <Route path ="/Filter/:chosenAlcohol" component={ShowCocktails} />
           <Route path ="/Filter/,:chosenAlcohol" component={ShowCocktails} />
           <Route path ="/Filter/:chosenAlcohol," component={ShowCocktails} />
-          <Route path ="/Game" component={Game} />
+          <Route path ="/Game" exact component={Game} />
+          <Route path ="/Game/:chosenValues" component={ShowGames}/> 
       
         </Switch>
       </div>

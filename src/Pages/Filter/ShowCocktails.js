@@ -6,8 +6,7 @@ function ShowCocktails({match}){
     let new_array;
     let text;
     const [items, setItems] = useState([]);
-    useEffect (() => {
-        
+    useEffect (() => {                        
         console.log(match);
         
         text = `${match.params.chosenAlcohol}`;
@@ -19,15 +18,19 @@ function ShowCocktails({match}){
             text = text.slice(0,-1);
             console.log(text);
         }
-        fetchItems();
+        if(text.startsWith(",")){
+            text = text.slice(1);
+            console.log(text)
+        }
+        fetchItems(text);
+        setItems([]);
+        new_array.forEach(filter=>fetchItems(filter))
     },[]);
     
-   
-
-    const fetchItems =  () =>  {
+    const fetchItems =  (filter) =>  {
         console.log("1");
         fetch(
-            `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${text}`
+            `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${filter}`
         ).then (async(e)  =>   {
             
             var data = await e.json();
@@ -35,16 +38,11 @@ function ShowCocktails({match}){
             console.log(data);
             if(data.drinks !== "None Found"){
                 console.log("then")
-                setItems(data.drinks);
+                setItems([...items,...data.drinks]);
                 console.log(data.drinks);
             }
             else{
-                
-                return(
-                    <div>
-                        no results for your chosen ingredients.
-                    </div>
-                )
+
             }
             
             

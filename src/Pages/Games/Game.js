@@ -1,6 +1,8 @@
 import {React,useState} from 'react'
 import './Game.css'
+import {Link} from 'react-router-dom';
 import DropdownSingle from '../Brands/DropdownSingle.js'
+import Dropdown from '../Filter/Dropdown.js';
 
 function Game () {
 
@@ -45,56 +47,110 @@ function Game () {
             value:10,
             label: '10',
         },
+        {
+            value:11,
+            label: '11',
+        },
+        {
+            value:12,
+            label: '12',
+        },
+        {
+            value:13,
+            label: '13',
+        },
+        {
+            value:14,
+            label: '14',
+        },
+        {
+            value:15,
+            label: '15',
+        },
     ];
     const genres= [
         {
             value: 1,
-            label :'Kartenspiel',
+            label :'Family',
         },
         {
             value:2,
-            label:'Strategiespiel',
+            label:'Party',
         },
         {
             value:3,
-            label: 'Aufbauspiel',
+            label: 'Card Game',
         },
         {
             value:4,
-            label: 'Reaktionsspiel',
+            label: 'Board Game',
         },
         {
-            value:5,
-            label: 'Denkspiel',
+            value: 5,
+            label: 'Drawing',
         },
         {
             value:6,
-            label: 'Familienspiele',
+            label: 'Adult',
         },
         {
             value:7,
-            label: 'Trinkspiele',
+            label: 'Cooperation',
         },
         {
             value:8,
-            label: 'Würfelspiele',
+            label: 'Communication',
         },
         {
             value:9,
-            label: 'Deduktionsspiel',
+            label: 'Strategy',
+        },
+        {
+            value:10,
+            label: 'Worker Placement',
+        },
+        {
+            value:11,
+            label: 'Builder',
+        },
+       
+        {
+            value:12,
+            label: 'Deduction',
+        },
+        {
+            value:13,
+            label: 'Reaction',
+        },
+        {
+            value:14,
+            label: 'Drinking',
+        },   
+        {
+            value:15,
+            label: 'Skill Game',
+        },
+        {
+            value:16,
+            label: 'Socialise',
         },
         
+        
     ];
-     const [amount, setAmount] = useState(3);
+     const [amount, setAmount] = useState([]);
      const [genre, setGenre] = useState({});
+
+     
 
     return(
         <div className='content'>
             <h1 className="title">Games</h1>
             <ul className ='horizontal'>
             <li className='element'><DropdownSingle title="Chose amount of player"  items={numbers} onItemsChanged={(items) => setAmount(items)}/></li>
-            <li className='element'><DropdownSingle title="Chose the genre you want to play"  items={genres} onItemsChanged={(items) => setGenre(items)}/></li>
-            <li> <button className='button'>Show Games</button></li>
+            <li className='element'><Dropdown title="Chose the genre you want to play"  items={genres} onItemsChanged={(items) => setGenre(items)}/></li>
+            <li> <Link to = {`/Game/5,${genre}`}>
+            <button className='button'>Show Games</button>
+                  </Link></li>
             </ul>
             
         </div>

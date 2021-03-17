@@ -5,15 +5,17 @@ import './DropdownSingle.css'
 
 function DropdownSingle({title, items,onItemsChanged})
 {
-    var[chosenItems,getvalue]=useState();
+    var[chosenItems,setValue]=useState();
     var Ddlhandle = (e) =>
     {
-        getvalue(Array.isArray(e)?e.map(x=>x.label):[]);
-        onItemsChanged(chosenItems);
+        const value = Array.isArray(e)?e.map(x=>x.label):[];
+        setValue(value);
+        onItemsChanged(value);
+        console.log(value)
     }  
     return(
         <div className="Auswahl">
-            {title}<Select options ={items} onChange={Ddlhandle}></Select>
+            {title}<Select options ={items} onChange= {(e) =>Ddlhandle(e)}></Select>
             {chosenItems}
         </div>
     );
