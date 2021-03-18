@@ -38,7 +38,6 @@ function App() {
                         <Route path="/Game/:chosenValues" component={ShowGames}/>
                         <Route path="/City" exact component={ChooseCity}/>
                         <Route path="/City/:chosenCity" component={ShowWeather}/>
-
                     </Switch>
                 </div>
             </div>
