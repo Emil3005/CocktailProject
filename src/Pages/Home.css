@@ -32,7 +32,7 @@
     width: 200px;
 }
 .HomeContent{
-    margin-top: -10%;
+    margin-top: -13%;
     font-size: 1.3rem;
     text-align: left;
 }
@@ -41,8 +41,8 @@
 
 }
 .HomeContentIcon{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 1%;
   
 }
@@ -56,4 +56,28 @@
     flex-direction: row;
     list-style: none;
     justify-content: left;
+}
+.HomeHorizontalList{
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+    padding: 1%;
+
+}
+.HomeVerticalList{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+
+    justify-content: right;
+    padding: 3%;
+}
+.HomeListText{
+    width: 200%;
+    padding: 7%;
+}
+.HomeListImage{
+    margin-left: 55%;
+    padding-top: 4%;
 }

@@ -25,7 +25,7 @@ const Header = () =>{
                             <img src={Trichter} className="Header-icon" alt="Filter" />
                         </Link>
                         <Link to ="/Game">
-                            <img src={Dice} className="Header-icon" alt= "Games" />
+                            <img src={Dice} className="Header-icon-Dice" alt= "Games" />
                         </Link>
                         <Link to ="/City">
                             <img src={Weather} className="Header-icon" alt= "Rating" />
