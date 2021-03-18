@@ -96,19 +96,14 @@ const Filter = () =>{
     const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
     return(
         <div className= "FilterFunctions">
-            
-            <Dropdown title="Wähle Alkohol aus"    items={Alcohol}    onItemsChanged={(items) => setChosenAlcohol(items) }/>
-            chosenAlcohol: {chosenAlcohol}
-            <Dropdown title="Wähle Softdrinks aus" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/>
-            chosenNonAlcohol: {chosenNonAlcohol}    
-        <div>
-                <br></br>
-                
-                <Link to = {`/Filter/${chosenAlcohol},${chosenNonAlcohol}`}>
-                    <button>Search</button>
-                </Link>
-            </div>
-            
+            <div className= "GameTitle">Filter</div>
+            <ul className="FilterList">
+            <li className = "Dropdown"><Dropdown className="Dropdown" title="Choose Alcohol"    items={Alcohol}    onItemsChanged={(items) => setChosenAlcohol(items) }/></li>
+            <li className = "Dropdown"><Dropdown className="Dropdown" title="Choose non Alcoholic" items={Softdrinks} onItemsChanged={(items) => setChosenNonAlcohol(items)}/></li>
+            <Link to = {`/Filter/${chosenAlcohol},${chosenNonAlcohol}`}>
+                <button className ="FilterButton">Search</button>
+            </Link>
+            </ul>  
         </div>
     );
 }

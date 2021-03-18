@@ -145,12 +145,12 @@ function Game () {
 
     return(
         <div className='content'>
-            <h1 className="title">Games</h1>
+            <div className= "GameTitle">Games</div>
             <ul className ='horizontal'>
             <li className='element'><DropdownSingle title="Chose amount of player"  items={numbers} onItemsChanged={(items) => setAmount(items)}/></li>
             <li className='element'><Dropdown title="Chose the genre you want to play"  items={genres} onItemsChanged={(items) => setGenre(items)}/></li>
             <li> <Link to = {`/Game/5,${genre}`}>
-            <button className='button'>Show Games</button>
+            <button className='GameButton'>Show Games</button>
                   </Link></li>
             </ul>
             

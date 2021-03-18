@@ -12,6 +12,8 @@ import GetIngredients from './Pages/Filter/GetIngredients';
 import ShowCocktails from './Pages/Filter/ShowCocktails';
 import Game from './Pages/Games/Game';
 import ShowGames from './Pages/Games/ShowGames';
+import ChooseCity from'./Pages/Weather/ChooseCity';
+import ShowWeather from './Pages/Weather/ShowWeather';
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
           <Route path ="/Filter/:chosenAlcohol," component={ShowCocktails} />
           <Route path ="/Game" exact component={Game} />
           <Route path ="/Game/:chosenValues" component={ShowGames}/> 
+          <Route path ="/City" exact component={ChooseCity} />
+          <Route path ="/City/:chosenCity"  component={ShowWeather} />
       
         </Switch>
       </div>

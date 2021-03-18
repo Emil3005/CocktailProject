@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
 import './ShowGames.css'
 
 
@@ -44,8 +43,7 @@ function Game({match}){
                             <ul className ="horizontal3">
                                 
                                 
-                                <li className="text">Minimal amount of Players: {item.minPlayer}</li>
-                                <li className="text">Maximal amount of Players: {item.maxPlayer}</li>
+                                <li className="text">{item.minPlayer} - {item.maxPlayer} Player</li>
                                 <li className="text">Age Advisory: {item.ageAdvisory}</li>           
                                 <li className="text">{item.genre1}</li>
                                 <li className="text">{item.genre2}</li>

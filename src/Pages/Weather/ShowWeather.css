@@ -1,0 +1,13 @@
+.cityName{
+    font-size: 1.8rem;
+}
+.cityContent{
+    margin-top: -10%;
+    font-size: larger;
+    list-style: none;
+    justify-content: space-between;
+}
+.cityImage{
+    height: 100px;
+    width: 100px;
+}
