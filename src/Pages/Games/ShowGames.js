@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './ShowGames.css'
+import {Link} from 'react-router-dom'
 
 
 function Game({match}){
@@ -35,6 +36,7 @@ function Game({match}){
     }
     return(
         <div className='context'>
+             <Link to ='/Game'> <button className = "ButtonShowCocktails">back</button></Link>
         {items.map(item =>(
                 <h0 key={item.id}>
                     <ul className='horizontal2'>

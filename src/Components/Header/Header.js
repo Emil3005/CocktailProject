@@ -20,17 +20,18 @@ const Header = () =>{
                     </Link>
                 </div>
                     <div className="Header-rightIcons">
-                        <Link to ="/">
-                            <img src={Home} className="Header-icon" alt="Home" />
-                        <Link to ="/Game">
-                            <img src={Dice} className="Header-icon" alt= "Games" />
-                        </Link>
-                        </Link>
+                        
                         <Link to ="/Filter">
                             <img src={Trichter} className="Header-icon" alt="Filter" />
                         </Link>
+                        <Link to ="/Game">
+                            <img src={Dice} className="Header-icon" alt= "Games" />
+                        </Link>
                         <Link to ="/City">
                             <img src={Weather} className="Header-icon" alt= "Rating" />
+                        </Link>
+                        <Link to ="/">
+                            <img src={Home} className="Header-icon" alt="Home" />
                         </Link>
                         
                 </div>

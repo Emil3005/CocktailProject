@@ -66,9 +66,11 @@ function ShowCocktails({match}){
     return(
 
         <div className="Content">
+            <Link to ='/Filter'> <button className = "ButtonShowCocktails">back</button></Link>
             {items.map(item =>(
                 <h2 key={item.idDrink}>
                     <ul className='vertical'>
+                        
                         <li>
                         <ul className ='horizontal'>
                         <li > 

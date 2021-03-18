@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./ShowWeather.css";
+import {Link} from 'react-router-dom'
 
 function ShowWeather(match){
     let chosenCity;
@@ -9,13 +10,7 @@ function ShowWeather(match){
         chosenCity= `${match.match.params.chosenCity}`
         console.log(chosenCity);
         fetchWeather();
-        if( chosenCity!==""){
-            
         
-        }
-        else{
-            alert("Stadt nicht gefunden");
-        }
     },[]);
     
 
@@ -34,10 +29,11 @@ function ShowWeather(match){
     }
     
     return(
-        <div>
+        <div className = "ShowWeatherContent">
+            <Link to ='/City'> <button className = "ButtonShowCocktails">back</button></Link>
             <ul className="cityContent">
 
-                <li className = "cityName">{city.location.name}</li>
+            <li className = "cityName">{city.location.name}</li>
                 <li> <img className= "cityImage" src={city.current.condition.icon} alt="Icon" /></li>
                 <li>{city.current.condition.text}  {city.current.temp_c}°C</li>
                 <li>feels like: {city.current.feelslike_c}°C</li>
