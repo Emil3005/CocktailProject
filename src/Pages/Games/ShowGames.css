@@ -1,36 +1,40 @@
-.context{
+.context {
     margin-top: -10%;
     font-size: 0.9rem;
 }
-.vertical2{
+
+.vertical2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     list-style: none;
     background-color: grey;
 }
-.horizontal3{
+
+.horizontal3 {
     display: flex;
     flex-direction: column;
     justify-content: right;
     list-style: none;
     background-color: lightgrey;
-   
-    
+
 
 }
-.horizontal2{
+
+.horizontal2 {
     display: flex;
     flex-direction: column;
     justify-content: right;
     list-style: none;
     background-color: lightgrey;
-    
+
 
 }
-.text{
-  font-size: 0.8rem;
+
+.text {
+    font-size: 0.8rem;
 }
-.titleGames{
+
+.titleGames {
     font-size: 1.4rem;
 }

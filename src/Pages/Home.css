@@ -1,12 +1,13 @@
-.Title{
+.Title {
     text-decoration: solid;
     font-size: 5rem;
     padding-top: 0%;
     text-align: center;
     padding-top: 1%;
-    
+
 }
-.Pictures{
+
+.Pictures {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -14,50 +15,57 @@
     flex-wrap: wrap;
     margin-right: 5%;
     margin-left: 2%;
-    
-    
-    
+
+
 }
-.btn{
+
+.btn {
     width: 400;
     color: black;
     background-color: grey;
     scale: 130%;
     padding: 0.1%;
-    
+
 }
-.Picture{
-    
+
+.Picture {
+
     height: 200px;
     width: 200px;
 }
-.HomeContent{
+
+.HomeContent {
     margin-top: -13%;
     font-size: 1.3rem;
     text-align: left;
 }
-.HomeContentList{
+
+.HomeContentList {
     list-style: none;
 
 }
-.HomeContentIcon{
+
+.HomeContentIcon {
     width: 40px;
     height: 40px;
     padding: 1%;
-  
+
 }
-.HomeContentIconWeather{
+
+.HomeContentIconWeather {
     width: 50px;
     height: 40px;
     padding: 1%;
 }
-.HomeContentListHorizontal{
+
+.HomeContentListHorizontal {
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: left;
 }
-.HomeHorizontalList{
+
+.HomeHorizontalList {
     display: flex;
     flex-direction: row;
 
@@ -65,7 +73,8 @@
     padding: 1%;
 
 }
-.HomeVerticalList{
+
+.HomeVerticalList {
     display: flex;
     list-style: none;
     flex-direction: column;
@@ -73,11 +82,13 @@
     justify-content: right;
     padding: 3%;
 }
-.HomeListText{
+
+.HomeListText {
     width: 200%;
     padding: 7%;
 }
-.HomeListImage{
+
+.HomeListImage {
     margin-left: 55%;
     padding-top: 4%;
 }

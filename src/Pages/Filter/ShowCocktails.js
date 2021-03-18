@@ -1,90 +1,90 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import "./ShowCocktails.css"
 
-function ShowCocktails({match}){
+function ShowCocktails({match}) {
     let new_array;
     let text;
     const [items, setItems] = useState([]);
-    useEffect (() => {                        
+    useEffect(() => {
         console.log(match);
-        
+
         text = `${match.params.chosenAlcohol}`;
 
         new_array = text.split(',');
-        
+
         console.log("hallo");
         console.log(new_array);
         console.log(text.endsWith(','));
-        if(text.endsWith(',')){
-            text = text.slice(0,-1);
+        if (text.endsWith(',')) {
+            text = text.slice(0, -1);
             console.log(text);
         }
-        if(text.startsWith(",")){
+        if (text.startsWith(",")) {
             text = text.slice(1);
             console.log(text)
 
         }
         fetchItems(text);
         setItems([]);
-        new_array.forEach(filter=>fetchItems(filter))
+        new_array.forEach(filter => fetchItems(filter))
 
-    },[]);
-    
-    const fetchItems =  (filter) =>  {
+    }, []);
+
+    const fetchItems = (filter) => {
         console.log("1");
         fetch(
             `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${filter}`
-        ).then (async(e)  =>   {
-            
+        ).then(async (e) => {
+
             var data = await e.json();
             console.log("data")
             console.log(data);
-            if(data.drinks !== "None Found"){
+            if (data.drinks !== "None Found") {
                 console.log("then")
-                setItems([...items,...data.drinks]);
+                setItems([...items, ...data.drinks]);
                 console.log(data.drinks);
-            }
-            else{
+            } else {
 
             }
-            
-            
-        }).catch((e)=>{
+
+
+        }).catch((e) => {
             console.log("ERROR")
-            
-            
-            
-        }).finally(()=>{
+
+
+        }).finally(() => {
             console.log("3")
-            
+
         })
         ;
     }
-    
-    
-    return(
+
+
+    return (
 
         <div className="Content">
-            <Link to ='/Filter'> <button className = "ButtonShowCocktails">back</button></Link>
-            {items.map(item =>(
+            <Link to='/Filter'>
+                <button className="ButtonShowCocktails">back</button>
+            </Link>
+            {items.map(item => (
                 <h2 key={item.idDrink}>
                     <ul className='vertical'>
-                        
+
                         <li>
-                        <ul className ='horizontal'>
-                        <li > 
-                            <Link to = {`/Rating/${item.idDrink}`}>
-                                <img src={item.strDrinkThumb} alt="" className="CocktailPicture"/> 
-                            </Link>
-                            </li>
-                            <li>
-                                <div className='Title'>
-                            {item.strDrink}
-                            </div> 
-                            </li>
-                        
-                        </ul>
+                            <ul className='horizontal'>
+                                <li>
+                                    <Link to={`/Rating/${item.idDrink}`}>
+                                        <img src={item.strDrinkThumb} alt="" className="CocktailPicture"/>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <div className='Title'>
+                                        {item.strDrink}
+                                    </div>
+                                </li>
+
+                            </ul>
                         </li>
                     </ul>
                 </h2>

@@ -1,34 +1,34 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
-function GetDrinksImages({letter}){
-
-
+function GetDrinksImages({letter}) {
 
 
     useEffect(() => {
         fetchItems();
         console.log(letter);
-    },[]);
+    }, []);
 
     const [items, setItems] = useState([]);
-    images :{};
+    images :{
+    }
+    ;
 
     const fetchItems = async () => {
-    const data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
-    );
-    const items = await data.json();
-    console.log(items.drinks);
-    setItems(items.drinks)
+        const data = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
+        );
+        const items = await data.json();
+        console.log(items.drinks);
+        setItems(items.drinks)
     }
-    return(
+    return (
         <div>
             {items.map(item => (
                 <h2 key={item.idDrink}>
-                    <ul className = "list">
+                    <ul className="list">
                         {item.strDrinkThumb}
-                   </ul>
-                   
-                   
+                    </ul>
+
+
                 </h2>
             ))}
         </div>

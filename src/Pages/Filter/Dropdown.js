@@ -1,20 +1,18 @@
-import React ,{useState} from 'react';
+import React, {useState} from 'react';
 import Select from 'react-select';
 import './Dropdown.css'
 
 
-function Dropdown({title, items,onItemsChanged})
-{
-    var[chosenItems,setvalue]=useState();
-    var Ddlhandle = (e) =>
-    {
-        const value = Array.isArray(e)?e.map(x=>x.label):[];
+function Dropdown({title, items, onItemsChanged}) {
+    var [chosenItems, setvalue] = useState();
+    var Ddlhandle = (e) => {
+        const value = Array.isArray(e) ? e.map(x => x.label) : [];
         setvalue(value);
         onItemsChanged(value);
-    }  
-    return(
+    }
+    return (
         <div className="Auswahl">
-            {title}<Select isMulti options ={items} onChange = {(e)=> Ddlhandle(e)} ></Select>
+            {title}<Select isMulti options={items} onChange={(e) => Ddlhandle(e)}></Select>
         </div>
     );
 }

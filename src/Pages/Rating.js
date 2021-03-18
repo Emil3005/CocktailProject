@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import "./Rating.css"
 
@@ -7,7 +7,7 @@ function Rating() {
 
     useEffect(() => {
         fetchItems();
-    },[]);
+    }, []);
 
     const [items, setItems] = useState([]);
 
@@ -19,19 +19,19 @@ function Rating() {
         setItems(items.drinks)
     }
     return (
-      <div className="DrinkList">
-        <div>
-            <h1>Rating</h1>
-        </div> 
+        <div className="DrinkList">
+            <div>
+                <h1>Rating</h1>
+            </div>
             {items.map(item => (
                 <h2 key={item.idDrink}>
-                    
-                    <Link to = {`/Rating/${item.idDrink}`}>{item.strDrink}</Link>
+
+                    <Link to={`/Rating/${item.idDrink}`}>{item.strDrink}</Link>
                 </h2>
             ))}
-           
-      </div>
-    );
-  }
 
-  export default Rating
+        </div>
+    );
+}
+
+export default Rating

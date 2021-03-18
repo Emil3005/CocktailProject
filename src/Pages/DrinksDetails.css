@@ -1,30 +1,34 @@
 
-.list{
+.list {
     list-style: none;
     text-align: left;
     font-size: 1.6rem;
     margin-top: -10%;
-   list-style: none;
+    list-style: none;
 }
-.CocktailPicture{
+
+.CocktailPicture {
     height: 300px;
     width: 300px;
     padding-top: 2%;
     padding-bottom: 3%;
 }
-.Instruction{
+
+.Instruction {
     font-size: 1.4rem;
     padding-right: 50%;
 }
 
-.CocktailPicture2{
+.CocktailPicture2 {
     height: 400px;
     width: 400px;
 }
-.name{
+
+.name {
     font-size: 2.3rem;
 }
-.ingredients{
+
+.ingredients {
     list-style: none;
     padding: 1%;
     display: flex;

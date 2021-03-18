@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import "./Home.css"
 
@@ -8,12 +8,12 @@ function ArrayPictures() {
     useEffect(() => {
         fetchItems();
         fetchItems2();
-    },[]);
+    }, []);
     //first Request to get 10 Drinks
     const [items, setItems] = useState([]);
     const fetchItems = async () => {
         const data = await fetch('https://www.thecocktaildb.com/api/json/v2/9973533/randomselection.php'
-        //link to receive 10 random Cocktails
+            //link to receive 10 random Cocktails
         );
         const items = await data.json();
         console.log(items.drinks);
@@ -29,20 +29,20 @@ function ArrayPictures() {
         setItems2(items2.drinks)
     }
     return (
-      <div className="Pictures">
+        <div className="Pictures">
             {items.map(item => (
-                <Link to = {`/Rating/${item.idDrink}`}>
-                    <img src={item.strDrinkThumb} alt="" className="Picture"/> 
+                <Link to={`/Rating/${item.idDrink}`}>
+                    <img src={item.strDrinkThumb} alt="" className="Picture"/>
                 </Link>
             ))}
             {items2.map(item => (
-                <Link to = {`/Rating/${item.idDrink}`}>
-                    <img src={item.strDrinkThumb} alt="" className="Picture"/> 
+                <Link to={`/Rating/${item.idDrink}`}>
+                    <img src={item.strDrinkThumb} alt="" className="Picture"/>
                 </Link>
             ))}
-            
-      </div>
-    );
-  }
 
-  export default  ArrayPictures
+        </div>
+    );
+}
+
+export default ArrayPictures

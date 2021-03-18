@@ -1,29 +1,33 @@
-.IngredientsTitle{
+.IngredientsTitle {
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.FilterFunctions{
+
+.FilterFunctions {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: -10%;
-    
+
 }
-.FilterList{
+
+.FilterList {
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: left;
 }
-.Dropdown{
+
+.Dropdown {
     padding: 1%;
     color: black;
     font-size: 1.6rem;
     width: 30%;
 }
-.FilterButton{
+
+.FilterButton {
     padding: 1%;
     color: black;
     font-size: 1.6rem;

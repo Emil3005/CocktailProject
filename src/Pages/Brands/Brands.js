@@ -3,44 +3,45 @@ import './Brands.css';
 import DropdownSingle from './DropdownSingle';
 import GetBrands from './GetBrands.js';
 
-const Alkohol= [
+const Alkohol = [
     {
         value: 1,
-        label :'Gin',
+        label: 'Gin',
     },
     {
-        value:2,
-        label:'Vodka',
+        value: 2,
+        label: 'Vodka',
     },
     {
-        value:3,
+        value: 3,
         label: 'Whiskey',
     },
     {
-        value:4,
+        value: 4,
         label: 'Rum, schwarz',
     },
     {
-        value:5,
+        value: 5,
         label: 'Rum, weiß',
     },
     {
-        value:6,
+        value: 6,
         label: 'Rum, braun',
     },
     {
-        value:7,
+        value: 7,
         label: 'Tequilla',
     },
 ];
 
-  var chosenAlkohol= [];
- 
-const Brands = () =>{
-    return(
-        <div className= "BrandFilter">
-            <DropdownSingle title="Chose your Alcohol" items={Alkohol} onItemsChanged={(items) => chosenAlkohol = items}/>
-            <GetBrands />
+var chosenAlkohol = [];
+
+const Brands = () => {
+    return (
+        <div className="BrandFilter">
+            <DropdownSingle title="Chose your Alcohol" items={Alkohol}
+                            onItemsChanged={(items) => chosenAlkohol = items}/>
+            <GetBrands/>
         </div>
     );
 }
