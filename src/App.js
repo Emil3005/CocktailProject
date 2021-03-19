@@ -36,8 +36,8 @@ function App() {
                         <Route path="/Filter/:chosenAlcohol," component={ShowCocktails}/>
                         <Route path="/Game" exact component={Game}/>
                         <Route path="/Game/:chosenValues" component={ShowGames}/>
-                        <Route path="/City" exact component={ChooseCity}/>
-                        <Route path="/City/:chosenCity" component={ShowWeather}/>
+                        <Route path="/City" component={ShowWeather}/>
+                        
                     </Switch>
                 </div>
             </div>
