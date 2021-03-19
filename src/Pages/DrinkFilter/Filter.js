@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Filter.css';
 import {Link} from 'react-router-dom'
-import Dropdown from './Dropdown.js'
+import Dropdown from '../../Components/DropDown/Dropdown.js'
 
 const Alcohol = [
     {

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom';
 import ArrayPictures from './ArrayPictures';
-import Trichter from '../Assets/Trichter.png'
-import Dice from '../Assets/Dice.png'
-import Weather from '../Assets/Weather.png';
+import Cocktail from '../../Assets/Cocktail.png'
+import Dice from '../../Assets/Dice.png';
+import Weather from '../../Assets/Weather.png';
 
 
 class Home extends Component {
@@ -34,7 +34,7 @@ class Home extends Component {
                                     <ul className="HomeVerticalList">
                                         <li className="HomeListImage">
                                             <Link to="/Filter">
-                                                <img src={Trichter} className="HomeContentIcon" alt="Filter"/>
+                                                <img src={Cocktail} className="HomeContentIcon" alt="Filter"/>
                                             </Link>
                                         </li>
                                         <li className="HomeListImage">

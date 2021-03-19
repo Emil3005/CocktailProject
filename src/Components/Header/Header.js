@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import Home from '../../Assets/Home.png'
-import Trichter from '../../Assets/Trichter.png'
+import Cocktail from '../../Assets/Cocktail.png'
 import logo from '../../Assets/LogoIcon.png'
 import Dice from '../../Assets/Dice.png'
 import Weather from '../../Assets/Weather.png';
@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="Header-rightIcons">
 
                     <Link to="/Filter">
-                        <img src={Trichter} className="Header-icon" alt="Filter"/>
+                        <img src={Cocktail} className="Header-icon" alt="Filter"/>
                     </Link>
                     <Link to="/Game">
                         <img src={Dice} className="Header-icon-Dice" alt="Games"/>

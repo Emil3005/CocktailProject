@@ -74,7 +74,7 @@ function ShowCocktails({match}) {
                         <li>
                             <ul className='horizontal'>
                                 <li>
-                                    <Link to={`/Rating/${item.idDrink}`}>
+                                    <Link to={`/Drink/${item.idDrink}`}>
                                         <img src={item.strDrinkThumb} alt="" className="CocktailPicture"/>
                                     </Link>
                                 </li>

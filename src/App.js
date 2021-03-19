@@ -1,17 +1,12 @@
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Header from './Components/Header/Header.js'
 import './Style/App.css'
-import Filter from './Pages/Filter/Filter'
-import Home from "./Pages/Home";
-import Rating from "./Pages/Rating";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import DrinksDetail from './Pages/DrinksDetail';
-import Brands from './Pages/Brands/Brands.js';
-import AllDrinksList from './Pages/AllDrinks/AllDrinksList';
-import GetIngredients from './Pages/Filter/GetIngredients';
-import ShowCocktails from './Pages/Filter/ShowCocktails';
+import Filter from './Pages/DrinkFilter/Filter'
+import Home from "./Pages/Home/Home";
+import DrinksDetail from './Pages/SingleDrinks/DrinksDetail';
+import ShowCocktails from './Pages/DrinkFilter/ShowCocktails';
 import Game from './Pages/Games/Game';
 import ShowGames from './Pages/Games/ShowGames';
-import ChooseCity from './Pages/Weather/ChooseCity';
 import ShowWeather from './Pages/Weather/ShowWeather';
 
 
@@ -24,13 +19,9 @@ function App() {
                 </div>
                 <div className="mainContent">
                     <Switch>
-                        <Route path="/Rating" exact component={Rating}/>
-                        <Route path="/Filter" exact component={Filter}/>
                         <Route path="/" exact component={Home}/>
-                        <Route path="/Rating/:id" component={DrinksDetail}/>
-                        <Route path="/Brands" component={Brands}/>
-                        <Route path="/AllDrinks" component={AllDrinksList}/>
-                        <Route path="/Ingredients" component={GetIngredients}/>
+                        <Route path="/Filter" exact component={Filter}/>
+                        <Route path="/Drink/:id" component={DrinksDetail}/>
                         <Route path="/Filter/:chosenAlcohol" component={ShowCocktails}/>
                         <Route path="/Filter/,:chosenAlcohol" component={ShowCocktails}/>
                         <Route path="/Filter/:chosenAlcohol," component={ShowCocktails}/>

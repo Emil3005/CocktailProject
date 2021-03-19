@@ -1,8 +1,8 @@
 import {React, useState} from 'react'
 import './Game.css'
 import {Link} from 'react-router-dom';
-import DropdownSingle from '../Brands/DropdownSingle.js'
-import Dropdown from '../Filter/Dropdown.js';
+import DropdownSingle from '../../Components/DropDown/DropdownSingle.js'
+import Dropdown from '../../Components/DropDown/Dropdown.js';
 
 function Game() {
 

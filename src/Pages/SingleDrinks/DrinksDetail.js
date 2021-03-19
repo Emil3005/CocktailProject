@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import "./Rating.css"
 import "./DrinksDetails.css"
-import "./Home.css"
+import "../Home/Home.css"
 
 
 function DrinksDetail({match}) {
