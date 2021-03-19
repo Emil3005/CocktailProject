@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './Filter.css';
+import './Drink.css';
 import {Link} from 'react-router-dom'
 import Dropdown from '../../Components/DropDown/Dropdown.js'
 
@@ -73,7 +73,7 @@ const Softdrinks = [
 ];
 
 
-const Filter = () => {
+const Drink = () => {
 
     useEffect(() => {
         fetchItems();
@@ -108,4 +108,4 @@ const Filter = () => {
     );
 }
 
-export default Filter;
+export default Drink;

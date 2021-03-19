@@ -33,7 +33,7 @@ class Home extends Component {
                                 <li>
                                     <ul className="HomeVerticalList">
                                         <li className="HomeListImage">
-                                            <Link to="/Filter">
+                                            <Link to="/Drink">
                                                 <img src={Cocktail} className="HomeContentIcon" alt="Filter"/>
                                             </Link>
                                         </li>

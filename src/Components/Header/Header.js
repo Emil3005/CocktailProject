@@ -21,8 +21,8 @@ const Header = () => {
                 </div>
                 <div className="Header-rightIcons">
 
-                    <Link to="/Filter">
-                        <img src={Cocktail} className="Header-icon" alt="Filter"/>
+                    <Link to="/Drink">
+                        <img src={Cocktail} className="Header-icon" alt="Drink"/>
                     </Link>
                     <Link to="/Game">
                         <img src={Dice} className="Header-icon-Dice" alt="Games"/>

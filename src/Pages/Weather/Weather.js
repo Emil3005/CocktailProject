@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ShowWeather.css";
+import "./Weather.css";
 
 import ReactWeather, {useOpenWeather} from 'react-open-weather';
 
