@@ -31,12 +31,12 @@ function ArrayPictures() {
     return (
         <div className="Pictures">
             {items.map(item => (
-                <Link to={`/Drink/${item.idDrink}`}>
+                <Link to={`/DrinkID/${item.idDrink}`}>
                     <img src={item.strDrinkThumb} alt="" className="Picture"/>
                 </Link>
             ))}
             {items2.map(item => (
-                <Link to={`/Drink/${item.idDrink}`}>
+                <Link to={`/DrinkID/${item.idDrink}`}>
                     <img src={item.strDrinkThumb} alt="" className="Picture"/>
                 </Link>
             ))}

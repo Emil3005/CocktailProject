@@ -23,8 +23,8 @@ class ChooseCity extends React.Component {
         return (
             <div className="FilterFunctions">
                 <form className="Dropdown" onSubmit={this.handleSubmit}><label>
-                    <div className="WeatherTitle">Weather</div>
-                    City:
+                    <div className="WeatherTitle">Weather</div> 
+                    City: 
                     <input className="cityInput" type="text" value={this.state.value} onChange={this.handleChange}/>
                 </label>
                     <Link to={`/City/${this.state.value}`}>

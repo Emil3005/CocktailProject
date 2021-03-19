@@ -151,7 +151,7 @@ function Game() {
                 <li className='element'><Dropdown title="Chose the genre you want to play" items={genres}
                                                   onItemsChanged={(items) => setGenre(items)}/></li>
                 <li><Link to={`/Game/5,${genre}`}>
-                    <button className='GameButton'>Show Games</button>
+                    <button className='FilterButton'>Search</button>
                 </Link></li>
             </ul>
 

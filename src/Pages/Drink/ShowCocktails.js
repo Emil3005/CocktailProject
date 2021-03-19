@@ -7,12 +7,10 @@ function ShowCocktails({match}) {
     let text;
     const [items, setItems] = useState([]);
     useEffect(() => {
+        console.log("hallo");
         console.log(match);
-
         text = `${match.params.chosenAlcohol}`;
-
         new_array = text.split(',');
-
         console.log("hallo");
         console.log(new_array);
         console.log(text.endsWith(','));
@@ -62,9 +60,9 @@ function ShowCocktails({match}) {
 
 
     return (
-
+        
         <div className="Content">
-            <Link to='/Filter'>
+            <Link to='/Drink'>
                 <button className="ButtonShowCocktails">back</button>
             </Link>
             {items.map(item => (
@@ -74,7 +72,7 @@ function ShowCocktails({match}) {
                         <li>
                             <ul className='horizontal'>
                                 <li>
-                                    <Link to={`/Drink/${item.idDrink}`}>
+                                    <Link to={`/DrinkID/${item.idDrink}`}>
                                         <img src={item.strDrinkThumb} alt="" className="CocktailPicture"/>
                                     </Link>
                                 </li>

@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Header from './Components/Header/Header.js'
 import './Style/App.css'
-import Drink from './Pages/Drink/Drink'
+import Drink from './Pages/Drink/Drink.js'
 import Home from "./Pages/Home/Home";
 import DrinksDetail from './Pages/Drink/SingleDrinks/DrinksDetail';
 import ShowCocktails from './Pages/Drink/ShowCocktails';
@@ -18,7 +18,7 @@ function App() {
                     <Switch> 
                         <Route path="/" exact component={Home}/>
                         <Route path="/Drink" exact component={Drink}/>
-                        <Route path="/Drink/:id" component={DrinksDetail}/>
+                        <Route path="/DrinkID/:id" component={DrinksDetail}/>
                         <Route path="/Drink/:chosenAlcohol" component={ShowCocktails}/>
                         <Route path="/Drink/,:chosenAlcohol" component={ShowCocktails}/>
                         <Route path="/Drink/:chosenAlcohol," component={ShowCocktails}/>

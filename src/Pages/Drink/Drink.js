@@ -3,6 +3,7 @@ import './Drink.css';
 import {Link} from 'react-router-dom'
 import Dropdown from '../../Components/DropDown/Dropdown.js'
 
+//Diese Klasse beschreibt die Filter Seite der Coktails. Die verschiedenen Sorten sind als Array angelegt und kompatibel mit den Einträgen der Datenbank.
 const Alcohol = [
     {
         value: 1,
@@ -75,32 +76,24 @@ const Softdrinks = [
 
 const Drink = () => {
 
-    useEffect(() => {
-        fetchItems();
-    }, []);
+    
 
     const [items, setItems] = useState([]);
 
 
-    const fetchItems = async () => {
-        const data = await fetch('https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list'
-        );
-        const items = await data.json();
-        console.log(items.drinks);
-        setItems(items.drinks)
-    }
+    
 
     const [chosenAlcohol, setChosenAlcohol] = useState([]);
     const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
     return (
         <div className="FilterFunctions">
-            <div className="GameTitle">Filter</div>
+            <div className="GameTitle">Drinks</div>
             <ul className="FilterList">
                 <li className="Dropdown"><Dropdown className="Dropdown" title="Choose Alcohol" items={Alcohol}
                                                    onItemsChanged={(items) => setChosenAlcohol(items)}/></li>
                 <li className="Dropdown"><Dropdown className="Dropdown" title="Choose non Alcoholic" items={Softdrinks}
                                                    onItemsChanged={(items) => setChosenNonAlcohol(items)}/></li>
-                <Link to={`/Filter/${chosenAlcohol},${chosenNonAlcohol}`}>
+                <Link to={`/Drink/${chosenAlcohol},${chosenNonAlcohol}`}>
                     <button className="FilterButton">Search</button>
                 </Link>
             </ul>
