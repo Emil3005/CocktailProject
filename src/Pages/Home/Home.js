@@ -6,7 +6,7 @@ import Cocktail from '../../Assets/Cocktail.png'
 import Dice from '../../Assets/Dice.png';
 import Weather from '../../Assets/Weather.png';
 
-
+//Startseite der Applikation
 class Home extends Component {
 
     btnWasClicked(event) {
@@ -22,6 +22,7 @@ class Home extends Component {
                     <ul className="HomeContentList">
                         <div>
                             <ul className="HomeHorizontalList">
+                                
                                 <li>
                                     <ul className="HomeVerticalList">
                                         <li className="HomeListText">Find your Cocktail</li>
@@ -56,7 +57,7 @@ class Home extends Component {
 
                         <hr></hr>
                         <li>
-                            Below you see 20 random Cocktails, if one strikes your eye, just klick on it.
+                            Below you see 20 random Cocktails, if one strikes your eye, just klick on it. 
                         </li>
 
                     </ul>
@@ -67,7 +68,7 @@ class Home extends Component {
                     <ArrayPictures/>
                 </div>
             </div>
-
+//Die 20 Bilder der Cocktails die auf der Startseite angezeigt werden
 
         );
     }

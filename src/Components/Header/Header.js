@@ -9,7 +9,8 @@ import "./Header.css"
 
 const Header = () => {
 
-
+//Header als Navigationsleiste definiert
+//Icons mit Links zu den Pages
     return (
 
         <nav>

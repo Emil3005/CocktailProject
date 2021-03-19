@@ -9,6 +9,8 @@ import Game from './Pages/Games/Game';
 import ShowGames from './Pages/Games/ShowGames';
 import Weather from './Pages/Weather/Weather';
 
+//main Class, entscheided welche Komponente gerendert werden
+//wird über Switch durch die URL definiert
 function App() {
     return (
         <Router>

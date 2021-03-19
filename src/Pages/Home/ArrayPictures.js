@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import "./Home.css"
 
-
+//Beschreibt die 20 Bilder von zufälligen Cocktails die auf der Startseite angezeigt werden
 function ArrayPictures() {
 
     useEffect(() => {

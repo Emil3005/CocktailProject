@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import "./ShowCocktails.css"
 
+//Liste der Cocktails die zurückgegeben wird
 function ShowCocktails({match}) {
     let new_array;
     let text;
@@ -28,7 +29,7 @@ function ShowCocktails({match}) {
         new_array.forEach(filter => fetchItems(filter))
 
     }, []);
-
+//fetchen der Drinks über die CocktailDB
     const fetchItems = (filter) => {
         console.log("1");
         fetch(
@@ -60,7 +61,7 @@ function ShowCocktails({match}) {
 
 
     return (
-        
+        //rendern der Ergebnisse als Liste. Bilder anklickbar und leitet zu DrinksID/:id weiter
         <div className="Content">
             <Link to='/Drink'>
                 <button className="ButtonShowCocktails">back</button>

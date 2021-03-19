@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Select from 'react-select';
 import './Dropdown.css'
 
-
+//Dropdown Fenster als Multiple Choice
 function Dropdown({title, items, onItemsChanged}) {
     var [chosenItems, setvalue] = useState();
     var Ddlhandle = (e) => {

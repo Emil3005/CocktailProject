@@ -38,6 +38,7 @@ const Alcohol = [
         label: 'Whiskey',
     },
 ];
+//nicht alkoholische GEtränke vordefiniert, kompatibel mit Datenbank
 const Softdrinks = [
     {
         value: 1,
@@ -75,16 +76,9 @@ const Softdrinks = [
 
 
 const Drink = () => {
-
-    
-
-    const [items, setItems] = useState([]);
-
-
-    
-
     const [chosenAlcohol, setChosenAlcohol] = useState([]);
     const [chosenNonAlcohol, setChosenNonAlcohol] = useState([]);
+    //rendern der beiden Dropdown Fenster und des "Search" Knopfes
     return (
         <div className="FilterFunctions">
             <div className="GameTitle">Drinks</div>

@@ -5,7 +5,7 @@ import DropdownSingle from '../../Components/DropDown/DropdownSingle.js'
 import Dropdown from '../../Components/DropDown/Dropdown.js';
 
 function Game() {
-
+//Vordefinierte Auswahl an Anzahl von Spielern
     const numbers = [
         {
             value: 1,
@@ -68,6 +68,7 @@ function Game() {
             label: '15',
         },
     ];
+    //vordefinierte Auswahl an Genre, kompatibel mit der Datenbank
     const genres = [
         {
             value: 1,
@@ -141,7 +142,8 @@ function Game() {
 
     const [genre, setGenre] = useState([]);
 
-
+//rendert die 2 Dropdown Fenster und den Knopf "Search"
+//Bei klick des Knopfes wird auf die Seite Game/amountOfPlayers/chosenGenres
     return (
         <div className='content'>
             <div className="GameTitle">Games</div>

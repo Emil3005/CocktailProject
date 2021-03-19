@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Select from 'react-select';
 import './DropdownSingle.css'
 
-
+//Dropdown Fenser als Single-Choice
 function DropdownSingle({title, items, onItemsChanged}) {
     var [chosenItems, setValue] = useState();
     var Ddlhandle = (e) => {

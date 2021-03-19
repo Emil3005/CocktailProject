@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './ShowGames.css'
 import {Link} from 'react-router-dom'
 
-
+//Liste der Spiele, die angezeigt werden
 function Game({match}) {
 
 
@@ -25,7 +25,9 @@ function Game({match}) {
 
     const fetchGames = async () => {
 
-
+//Fetch an die lokale/interne API über localHost 8090
+//filterInformation[0]=amount of Players
+//FilterInformation[1-3]=Genre 
         const games = await fetch(
             `http://localhost:8090/game/getGame?player=${filter_information[0]}&genre1=${filter_information[1]}&genre2=${filter_information[2]}&genre3=${filter_information[3]}`
         );
@@ -34,6 +36,7 @@ function Game({match}) {
         console.log(items);
 
     }
+    //die Ausgabe der Spiele wird als Liste gerendert
     return (
         <div className='context'>
             <Link to='/Game'>
