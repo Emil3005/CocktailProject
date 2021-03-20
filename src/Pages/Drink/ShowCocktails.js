@@ -25,8 +25,7 @@ function ShowCocktails({match}) {
 
         }
         fetchItems(text);
-        setItems([]);
-        new_array.forEach(filter => fetchItems(filter))
+       
 
     }, []);
 //fetchen der Drinks über die CocktailDB
@@ -41,7 +40,7 @@ function ShowCocktails({match}) {
             console.log(data);
             if (data.drinks !== "None Found") {
                 console.log("then")
-                setItems([...items, ...data.drinks]);
+                setItems(data.drinks);
                 console.log(data.drinks);
             } else {
 

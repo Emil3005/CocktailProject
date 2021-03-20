@@ -72,6 +72,22 @@ const Softdrinks = [
         value: 8,
         label: 'Passion fruit syrup',
     },
+    {
+        value: 9,
+        label: 'Coca-Cola',
+    },
+    {
+        value: 10,
+        label: 'Fante',
+    },
+    {
+        value: 11,
+        label: 'Lemon Juice',
+    },
+    {
+        value: 12,
+        label: '7-up',
+    },
 ];
 
 
