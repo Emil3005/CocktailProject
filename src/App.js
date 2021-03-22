@@ -20,6 +20,7 @@ function App() {
                     <Switch> 
                         <Route path="/" exact component={Home}/>
                         <Route path="/Drink" exact component={Drink}/>
+                        <Route path="/Drink/," exact component={Drink}/>
                         <Route path="/DrinkID/:id" component={DrinksDetail}/>
                         <Route path="/Drink/:chosenAlcohol" component={ShowCocktails}/>
                         <Route path="/Drink/,:chosenAlcohol" component={ShowCocktails}/>
