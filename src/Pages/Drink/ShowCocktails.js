@@ -24,6 +24,9 @@ function ShowCocktails({match}) {
             console.log(text)
 
         }
+        if(text == ""){
+            alert("pls choose something");
+        }
         fetchItems(text);
        
 
@@ -42,8 +45,9 @@ function ShowCocktails({match}) {
                 console.log("then")
                 setItems(data.drinks);
                 console.log(data.drinks);
+                
             } else {
-
+                alert("no Drinks found, change Criteria");
             }
 
 
