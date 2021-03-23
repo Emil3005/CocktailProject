@@ -7,6 +7,7 @@ function Game({match}) {
 
 
     let filter_information = [];
+    
     let txtfilter;
     const [items, setItems] = useState([]);
 
