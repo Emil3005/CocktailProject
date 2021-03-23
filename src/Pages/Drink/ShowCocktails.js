@@ -44,6 +44,39 @@ function ShowCocktails({match}) {
                 setItems([...items, ...data.drinks]);
                 console.log(data.drinks);
             } else {
+<<<<<<< Updated upstream
+=======
+                setItems([]);
+                new_array.forEach(filter => fetchItemsMulti(filter))
+                
+            }
+
+
+        }).catch((e) => {
+            console.log("ERROR")
+
+
+        }).finally(() => {
+            console.log("3")
+
+        })
+        ;
+    }
+    const fetchItemsMulti = (filter) => {
+        console.log("1");
+        fetch(
+            `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${filter}`
+        ).then(async (e) => {
+
+            var data = await e.json();
+            console.log("data")
+            console.log(data);
+            if (data.drinks !== "None Found") {
+                console.log("then")
+                setItems([...items, ...data.drinks]);
+                console.log(data.drinks);
+            } else {
+>>>>>>> Stashed changes
 
             }
 
