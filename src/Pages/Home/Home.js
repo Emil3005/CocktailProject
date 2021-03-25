@@ -57,7 +57,7 @@ class Home extends Component {
 
                         <hr></hr>
                         <li>
-                            Below you see 20 random Cocktails, if one strikes your eye, just klick on it. 
+                            Below you see 20 random Cocktails, if one strikes your eye, just click on it. 
                         </li>
 
                     </ul>
