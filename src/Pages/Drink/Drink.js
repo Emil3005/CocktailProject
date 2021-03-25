@@ -58,7 +58,7 @@ const Softdrinks = [
     },
     {
         value: 5,
-        label: 'Multivitamin juice',
+        label: 'Lemon',
     },
     {
         value: 6,

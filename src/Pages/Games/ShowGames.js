@@ -7,6 +7,7 @@ function Game({match}) {
 
 
     let filter_information = [];
+    
     let txtfilter;
     const [items, setItems] = useState([]);
 
@@ -18,7 +19,6 @@ function Game({match}) {
         }
         filter_information = txtfilter.split(',')
         fetchGames();
-        console.log(match);
 
     }, []);
 
@@ -33,7 +33,7 @@ function Game({match}) {
         );
         const items = await games.json();
         setItems(items);
-        console.log(items);
+
 
     }
     //die Ausgabe der Spiele wird als Liste gerendert

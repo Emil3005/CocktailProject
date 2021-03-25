@@ -8,71 +8,38 @@ function ShowCocktails({match}) {
     let text;
     const [items, setItems] = useState([]);
     useEffect(() => {
-        console.log("hallo");
-        console.log(match);
         text = `${match.params.chosenAlcohol}`;
         new_array = text.split(',');
-        console.log("hallo");
-        console.log(new_array);
-        console.log(text.endsWith(','));
         if (text.endsWith(',')) {
             text = text.slice(0, -1);
-            console.log(text);
+           
         }
         if (text.startsWith(",")) {
             text = text.slice(1);
-            console.log(text)
+           
 
         }
+        if(text == ""){
+            alert("pls choose something");
+        }
         fetchItems(text);
+       
 
     }, []);
 //fetchen der Drinks über die CocktailDB
     const fetchItems = (filter) => {
-        console.log("1");
+        
         fetch(
             `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${filter}`
         ).then(async (e) => {
-
             var data = await e.json();
-            console.log("data")
-            console.log(data);
             if (data.drinks !== "None Found") {
-                console.log("then")
-                setItems(data.drinks);
-                console.log(data.drinks);
-            } else {
-                setItems([]);
-                new_array.forEach(filter => fetchItemsMulti(filter))
                 
-            }
-
-
-        }).catch((e) => {
-            console.log("ERROR")
-
-
-        }).finally(() => {
-            console.log("3")
-
-        })
-        ;
-    }
-    const fetchItemsMulti = (filter) => {
-        console.log("1");
-        fetch(
-            `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${filter}`
-        ).then(async (e) => {
-
-            var data = await e.json();
-            console.log("data")
-            console.log(data);
-            if (data.drinks !== "None Found") {
-                console.log("then")
-                setItems([...items, ...data.drinks]);
-                console.log(data.drinks);
+                setItems(data.drinks);
+               
+                
             } else {
-
+                alert("no Drinks found, change Criteria");
             }
 
 

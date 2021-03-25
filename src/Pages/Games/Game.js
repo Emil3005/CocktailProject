@@ -1,8 +1,8 @@
 import {React, useState} from 'react'
 import './Game.css'
 import {Link} from 'react-router-dom';
-import DropdownSingle from '../../Components/DropDown/DropdownSingle.js'
 import Dropdown from '../../Components/DropDown/Dropdown.js';
+import Dropdown2 from '../../Components/DropDown/Dropdown2.js';
 
 function Game() {
 //Vordefinierte Auswahl an Anzahl von Spielern
@@ -148,11 +148,11 @@ function Game() {
         <div className='content'>
             <div className="GameTitle">Games</div>
             <ul className='horizontal'>
-                <li className='element'><DropdownSingle title="Choose amount of player" items={numbers}
+                <li className='element'><Dropdown title="Choose amount of player" items={numbers}
                                                         onItemsChanged={(items) => setAmount(items)}/></li>
                 <li className='element'><Dropdown title="Choose the genre you want to play" items={genres}
                                                   onItemsChanged={(items) => setGenre(items)}/></li>
-                <li><Link to={`/Game/5,${genre}`}>
+                <li><Link to={`/Game/${amount[0]},${genre}`}>
                     <button className='FilterButton'>Search</button>
                 </Link></li>
             </ul>
